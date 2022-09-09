@@ -1,11 +1,19 @@
-import React from 'react'
-import "./TaskItemsContainer.css"
+import React, { useState } from "react";
+import "./TaskItemsContainer.css";
 
 export default function TaskItemsContainer(props) {
-    
+
   return (
     <div id="TaskItemsContainer">
-      {props.tasks.map(item => <p>item[0]</p>)}
+      {props.arrayItems.map((task) => (
+        <div
+          key={task.taskId}
+          idkey={task.taskId}
+          className="taskItem p-3 mb-2"
+        >
+          <i className="bi bi-x" onClick={props.removeItemHandler}></i> {task.task}
+        </div>
+      ))}
     </div>
-  )
+  );
 }

@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 #TaskItemsContainer{
   overflow-y:scroll;
+}
+.taskItem{
+  font-family: 'Montserrat', sans-serif;
+  background-color: #eee;
+  color: #3E3636;
+  font-weight: bold;
+  font-size: 1.1em;
+  border-radius:10px;
+  box-shadow: 0 0 10px #eee;
 }
