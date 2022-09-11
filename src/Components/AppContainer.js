@@ -5,15 +5,15 @@ import CreateTaskComponent from "./CreateTaskComponent";
 
 const itemArray = [
   {
-    taskId: 1,
+    keyattr: Math.random().toString(),
     task: "Walk the dog",
   },
   {
-    taskId: 2,
+    keyattr: Math.random().toString(),
     task: "Buy groceries",
   },
   {
-    taskId: 3,
+    keyattr: Math.random().toString(),
     task: "Do laundry",
   },
 ];
@@ -22,10 +22,10 @@ export default function AppContainer(props) {
   const [arrayItems, setArrayItems] = useState(itemArray);
 
   const removeItemHandler = (e) => {
-    const idRemoved = e.target.parentNode.getAttribute("idkey");
+    const idRemoved = e.target.parentNode.getAttribute("keyattr");
 
     const updatedArrayItems = arrayItems.filter((item) => {
-      if (item.taskId != idRemoved) {
+      if (item.keyattr != idRemoved) {
         return item;
       }
     });
@@ -35,6 +35,7 @@ export default function AppContainer(props) {
 
   const addItemHandler = (data) => {
     console.log(data);
+    setArrayItems([...arrayItems, data]);
   };
 
   return (

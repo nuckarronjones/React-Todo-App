@@ -24,6 +24,28 @@ h1{
   #AppGrid .row.content {
     flex: 1 1 auto;
   }
+  #AppGrid .row.content{
+    overflow-y: scroll;
+  }
   #AppGrid .row.footer {
     flex: 0 1 40px;
   }
+
+  /*Custom Scrollbar*/
+  /* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: none;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ccc; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
